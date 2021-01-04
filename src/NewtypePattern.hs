@@ -1,6 +1,6 @@
 module NewtypePattern where
 
-import Data.ByteString
+import Data.ByteString ( ByteString )
 
 newtype Volume = Volume Double
 
@@ -22,8 +22,7 @@ newtype PasswordHash = PasswordHash
 validateHash :: Password -> PasswordHash -> Bool
 validateHash = undefined 
 
-------------- Task
--- Improve the following code by applying the Newtype pattern.
+------------- Task: Improve the following code by applying the Newtype pattern.
 newtype PlayerHealth = PlayerHealth
   { unPlayerHealth :: Int
   }
@@ -90,3 +89,5 @@ hitPlayer player1 player2 =
             defense
             (playerHealth player1)
     in player1 { playerHealth = newHealth }
+
+-- TODO: Add doctest and test everything!
