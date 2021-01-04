@@ -32,12 +32,15 @@ library
       SmartConstructorPattern.Password
       SmartConstructorPattern.Tag
       SmartConstructorPattern.TagList
+      EvidencePattern
   other-modules:
       Paths_mini_patterns
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5, bytestring
+      base >=4.7 && <5
+    , bytestring
+    , containers
   default-language: Haskell2010
 
 executable mini-patterns-exe
