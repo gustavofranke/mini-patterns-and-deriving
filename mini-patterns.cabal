@@ -29,6 +29,9 @@ library
   exposed-modules:
       Lib
       NewtypePattern
+      SmartConstructorPattern.Password
+      SmartConstructorPattern.Tag
+      SmartConstructorPattern.TagList
   other-modules:
       Paths_mini_patterns
   hs-source-dirs:
