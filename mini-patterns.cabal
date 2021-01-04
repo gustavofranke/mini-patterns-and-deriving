@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ca4c5822cc6eaed3fe9de818f773780ee4f5cd5bcbee686615533cd82ef457c8
+-- hash: 59be47999f919903f02ce3fa24c9e8056f74f80ad6aa7ed5c8af1d21aad58222
 
 name:           mini-patterns
 version:        0.1.0.0
@@ -28,12 +28,13 @@ source-repository head
 library
   exposed-modules:
       Lib
+      NewtypePattern
   other-modules:
       Paths_mini_patterns
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      base >=4.7 && <5, bytestring
   default-language: Haskell2010
 
 executable mini-patterns-exe
