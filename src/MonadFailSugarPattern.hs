@@ -58,7 +58,9 @@ sumThree str = do
 
 -- return only values inside Just
 catMaybes :: [Maybe a] -> [a]
-catMaybes mas = undefined
+catMaybes mas = do
+  Just x <- mas
+  pure x
 
 -- MonadFail sugar: Task 3 Implement the following functions applying the MonadFail sugar pattern.
 
