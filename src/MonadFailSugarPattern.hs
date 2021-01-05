@@ -73,6 +73,13 @@ mapMaybe f as = do
 
 -- MonadFail sugar: Task 4 Implement the following functions applying the MonadFail sugar pattern.
 
+-- >>> threeNothing Nothing Nothing Nothing
+-- Just ()
+
 -- return @Just ()@ only if all three arguments are Nothing
 threeNothing :: Maybe a -> Maybe b -> Maybe c -> Maybe ()
-threeNothing = undefined
+threeNothing ma mb mc = do
+  Nothing <- Just ma
+  Nothing <- Just mb
+  Nothing <- Just mc
+  pure ()
