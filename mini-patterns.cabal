@@ -34,6 +34,7 @@ library
       SmartConstructorPattern.TagList
       EvidencePattern
       UnrepresentablePattern
+      MonadFailSugarPattern
   other-modules:
       Paths_mini_patterns
   hs-source-dirs:
@@ -42,6 +43,7 @@ library
       base >=4.7 && <5
     , bytestring
     , containers
+    , text
   default-language: Haskell2010
 
 executable mini-patterns-exe
