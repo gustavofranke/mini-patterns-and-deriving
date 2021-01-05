@@ -33,6 +33,7 @@ library
       SmartConstructorPattern.Tag
       SmartConstructorPattern.TagList
       EvidencePattern
+      UnrepresentablePattern
   other-modules:
       Paths_mini_patterns
   hs-source-dirs:
