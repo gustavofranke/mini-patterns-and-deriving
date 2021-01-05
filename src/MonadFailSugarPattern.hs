@@ -66,7 +66,10 @@ catMaybes mas = do
 
 -- return 'b's only from 'Just'
 mapMaybe :: (a -> Maybe b) -> [a] -> [b]
-mapMaybe = undefined
+mapMaybe f as = do
+  x <- fmap f as
+  Just y <- [x]
+  pure y
 
 -- MonadFail sugar: Task 4 Implement the following functions applying the MonadFail sugar pattern.
 
