@@ -1,1 +1,2 @@
-# mini-patterns
+# mini-patterns-and-deriving
+

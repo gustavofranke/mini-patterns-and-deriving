@@ -1,6 +1,6 @@
-name:                mini-patterns
+name:                mini-patterns-and-deriving
 version:             0.1.0.0
-github:              "githubuser/mini-patterns"
+github:              "githubuser/mini-patterns-and-deriving"
 license:             BSD3
 author:              "Author name here"
 maintainer:          "example@example.com"
@@ -17,16 +17,19 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/githubuser/mini-patterns#readme>
+description:         Please see the README on GitHub at <https://github.com/githubuser/mini-patterns-and-deriving#readme>
 
 dependencies:
 - base >= 4.7 && < 5
-
+- binary
+- bytestring
+- containers
+- text
 library:
   source-dirs: src
 
 executables:
-  mini-patterns-exe:
+  mini-patterns-and-deriving-exe:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -34,10 +37,10 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - mini-patterns
+    - mini-patterns-and-deriving
 
 tests:
-  mini-patterns-test:
+  mini-patterns-and-deriving-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
@@ -45,4 +48,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - mini-patterns
+    - mini-patterns-and-deriving
