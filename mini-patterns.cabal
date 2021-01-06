@@ -35,6 +35,8 @@ library
       EvidencePattern
       UnrepresentablePattern
       MonadFailSugarPattern
+
+      BidirectionalParsing
   other-modules:
       Paths_mini_patterns
   hs-source-dirs:
