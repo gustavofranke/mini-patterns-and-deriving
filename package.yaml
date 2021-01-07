@@ -19,12 +19,18 @@ extra-source-files:
 # common to point users to the README.md file.
 description:         Please see the README on GitHub at <https://github.com/githubuser/mini-patterns-and-deriving#readme>
 
+ghc-options:
+  - -Wall
+
 dependencies:
 - base >= 4.7 && < 5
 - binary
 - bytestring
 - containers
 - text
+- aeson
+- mtl
+- hashable
 library:
   source-dirs: src
 
