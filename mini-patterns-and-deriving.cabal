@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b390a7da50a27284efdba60b6a991039727135d83be9e94910a9a65daf575c70
+-- hash: 6b36d61f65e8a2c6bb6cff6374a00bc87495b3fbd302ff7ea5024c41314c2225
 
 name:           mini-patterns-and-deriving
 version:        0.1.0.0
@@ -29,6 +29,7 @@ library
   exposed-modules:
       BidirectionalParsing
       Deriving.Puzzle1
+      Deriving.Puzzle2
       Deriving.Training1
       Deriving.Training2
       EvidencePattern
