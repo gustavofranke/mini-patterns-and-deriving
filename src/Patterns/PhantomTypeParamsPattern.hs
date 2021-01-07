@@ -1,4 +1,4 @@
-module PhantomTypeParamsPattern where
+module Patterns.PhantomTypeParamsPattern where
 
 -- Task: Improve the following code by applying the Phantom type parameters pattern.
 -- Don’t worry about function implementations, they are not important in this task.

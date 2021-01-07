@@ -1,4 +1,4 @@
-module UnrepresentablePattern where
+module Patterns.UnrepresentablePattern where
 
 -- Make illegal states unrepresentable: Task 1
 -- Implement the following function by applying the make illegal states unrepresentable pattern.
@@ -8,7 +8,7 @@ module UnrepresentablePattern where
 -- ["M","i","ss","i","ss","i","pp","i"]
 -- Hint: Use the NonEmpty list.
 group :: Eq a => [a] -> [[a]]
-group = undefined
+group (x : xs) = undefined
 
 -- Make illegal states unrepresentable: Task 2
 -- Improve the following code by applying the make illegal states unrepresentable pattern.

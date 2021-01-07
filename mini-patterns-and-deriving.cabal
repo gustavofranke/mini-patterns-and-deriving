@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6b36d61f65e8a2c6bb6cff6374a00bc87495b3fbd302ff7ea5024c41314c2225
+-- hash: 28f8bd99d27c06400c1a2b6e6ec7005ce1faed7e9e1e149518b3b4873a8cbca4
 
 name:           mini-patterns-and-deriving
 version:        0.1.0.0
@@ -27,21 +27,21 @@ source-repository head
 
 library
   exposed-modules:
-      BidirectionalParsing
       Deriving.Puzzle1
       Deriving.Puzzle2
       Deriving.Training1
       Deriving.Training2
-      EvidencePattern
       Lib
-      MonadFailSugarPattern
-      NewtypePattern
-      PhantomTypeParamsPattern
-      RecursiveGo
-      SmartConstructorPattern.Password
-      SmartConstructorPattern.Tag
-      SmartConstructorPattern.TagList
-      UnrepresentablePattern
+      Patterns.BidirectionalParsing
+      Patterns.EvidencePattern
+      Patterns.MonadFailSugarPattern
+      Patterns.NewtypePattern
+      Patterns.PhantomTypeParamsPattern
+      Patterns.RecursiveGo
+      Patterns.SmartConstructorPattern.Password
+      Patterns.SmartConstructorPattern.Tag
+      Patterns.SmartConstructorPattern.TagList
+      Patterns.UnrepresentablePattern
   other-modules:
       Paths_mini_patterns_and_deriving
   hs-source-dirs:

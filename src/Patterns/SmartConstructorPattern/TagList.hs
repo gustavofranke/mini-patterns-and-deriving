@@ -1,8 +1,8 @@
-module SmartConstructorPattern.TagList where
+module Patterns.SmartConstructorPattern.TagList where
 
 import Data.List.NonEmpty (NonEmpty (..))
-import SmartConstructorPattern.Tag (Tag, mkTag)
-import Data.Either
+import Patterns.SmartConstructorPattern.Tag (Tag, mkTag)
+import Data.Either ()
 
 -- | Non-empty list of non-empty tags.
 newtype TagsList = TagsList (NonEmpty Tag)

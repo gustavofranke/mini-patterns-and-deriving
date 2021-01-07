@@ -1,4 +1,4 @@
-module SmartConstructorPattern.Tag where
+module Patterns.SmartConstructorPattern.Tag where
 -- Task: Improve the following code by applying the Smart constructor pattern.
 
 -- | Tag is a non-empty string.

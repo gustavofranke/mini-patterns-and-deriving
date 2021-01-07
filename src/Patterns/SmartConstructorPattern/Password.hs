@@ -1,4 +1,4 @@
-module SmartConstructorPattern.Password
+module Patterns.SmartConstructorPattern.Password
   ( Password,
     unPassword,
     mkPassword,

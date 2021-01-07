@@ -1,4 +1,4 @@
-module RecursiveGo where
+module Patterns.RecursiveGo where
 
 -- Recursive go: Task 1
 -- Improve the following code by applying the Recursive go pattern.

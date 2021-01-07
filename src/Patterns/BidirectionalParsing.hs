@@ -1,5 +1,5 @@
 {-# LANGUAGE RankNTypes #-}
-module BidirectionalParsing where
+module Patterns.BidirectionalParsing where
 
 -- Exercise: Implement the inverseMap function.
 inverseMap

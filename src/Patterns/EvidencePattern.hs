@@ -1,4 +1,4 @@
-module EvidencePattern where
+module Patterns.EvidencePattern where
 
 import Data.IntMap (IntMap)
 import Data.Maybe ( fromJust )

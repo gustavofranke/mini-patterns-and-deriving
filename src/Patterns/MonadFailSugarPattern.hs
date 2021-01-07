@@ -1,6 +1,6 @@
 {-# LANGUAGE LambdaCase #-}
 
-module MonadFailSugarPattern where
+module Patterns.MonadFailSugarPattern where
 
 import Text.Read ( readMaybe )
 import Data.Text (unpack, pack,  splitOn)

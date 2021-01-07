@@ -1,4 +1,4 @@
-module NewtypePattern where
+module Patterns.NewtypePattern where
 
 import Data.ByteString ( ByteString )
 
