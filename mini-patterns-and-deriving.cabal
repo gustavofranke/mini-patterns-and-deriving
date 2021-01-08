@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 720c5286a2be6ddaf34d1ee5cb48d3f6e1b410a20030e00a7cf0e05298aaa6ba
+-- hash: 1ddba7d38b223f6e2bb0681f08e91e8ea5fbd08210a14a9d98d359a6cfcf2359
 
 name:           mini-patterns-and-deriving
 version:        0.1.0.0
@@ -37,6 +37,7 @@ library
       Patterns.MonadFailSugarPattern
       Patterns.NewtypePattern
       Patterns.PhantomTypeParamsPattern
+      Patterns.Polymorphisation
       Patterns.RecursiveGo
       Patterns.SmartConstructorPattern.Password
       Patterns.SmartConstructorPattern.Tag
