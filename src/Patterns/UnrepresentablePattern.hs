@@ -4,15 +4,16 @@ module Patterns.UnrepresentablePattern where
 -- Implement the following function by applying the make illegal states unrepresentable pattern.
 
 -- group sublists of equal elements
--- >>> group "Mississippi"
+-- >>> group0 "Mississippi"
 -- ["M","i","ss","i","ss","i","pp","i"]
 -- Hint: Use the NonEmpty list.
-group :: Eq a => [a] -> [[a]]
-group (x : xs) = go [] (x : xs)
+group0 :: (Eq a) => [a] -> [[a]]
+group0 = go
   where
-    go res [] = res
-    go res [y] = res ++ [[y]]
-    go res curr@(y : ys) = if y == head ys then go (init res ++ [last res ++ [y]]) ys else go (res ++ [[x]]) ys
+    go [] = []
+    go (x : xs) = (x : cs) : go rest
+      where
+        (cs, rest) = span (== x) xs
 
 -- Make illegal states unrepresentable: Task 2
 -- Improve the following code by applying the make illegal states unrepresentable pattern.
