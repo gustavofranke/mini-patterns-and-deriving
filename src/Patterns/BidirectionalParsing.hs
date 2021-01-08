@@ -44,7 +44,7 @@ mkFruit clr nm = do
     pure $ Fruit c n
 
 
--- Example:
+-- | Example:
 -- >>> parseFruit "red apple"
 -- Just (Fruit {fruitColour = Red, fruitName = Apple})
 parseFruit :: String -> Maybe Fruit

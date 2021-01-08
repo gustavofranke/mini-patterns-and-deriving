@@ -38,13 +38,12 @@ keepOnlySameRights2 xs = xs >>= (\(Right n, Right m) -> if n == m then [n] else 
 
 -- Task 1 Implement the following functions applying the MonadFail sugar pattern.
 
--- returns sum of exactly 3 numbers separated by spaces in a string
+-- | returns sum of exactly 3 numbers separated by spaces in a string
 -- >>> sumThree "10 20 15"
 -- Just 45
-
+-- 
 -- >>> sumThree "10 7"
 -- Nothing
-
 sumThree :: String -> Maybe Int
 sumThree str = do
   [a, b, c] <- Just (fmap (\n -> readMaybe (Data.Text.unpack n) :: Maybe Int) (splitOn (Data.Text.pack " ") (Data.Text.pack str)))
@@ -71,11 +70,11 @@ mapMaybe f as = do
   Just y <- [x]
   pure y
 
--- MonadFail sugar: Task 4 Implement the following functions applying the MonadFail sugar pattern.
-
+-- | MonadFail sugar: Task 4 Implement the following functions applying the MonadFail sugar pattern.
+-- 
 -- >>> threeNothing Nothing Nothing Nothing
 -- Just ()
-
+-- 
 -- return @Just ()@ only if all three arguments are Nothing
 threeNothing :: Maybe a -> Maybe b -> Maybe c -> Maybe ()
 threeNothing ma mb mc = do

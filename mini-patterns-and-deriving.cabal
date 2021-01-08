@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 28f8bd99d27c06400c1a2b6e6ec7005ce1faed7e9e1e149518b3b4873a8cbca4
+-- hash: 720c5286a2be6ddaf34d1ee5cb48d3f6e1b410a20030e00a7cf0e05298aaa6ba
 
 name:           mini-patterns-and-deriving
 version:        0.1.0.0
@@ -91,6 +91,7 @@ test-suite mini-patterns-and-deriving-test
     , binary
     , bytestring
     , containers
+    , doctest >=0.16
     , hashable
     , mini-patterns-and-deriving
     , mtl

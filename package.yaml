@@ -54,4 +54,5 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
+    - doctest >= 0.16
     - mini-patterns-and-deriving

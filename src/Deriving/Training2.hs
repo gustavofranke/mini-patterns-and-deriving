@@ -13,8 +13,10 @@ import Data.String (IsString, fromString)
 import Data.Text (Text)
 import GHC.Generics (Generic)
 
+-- |
 -- >>> show (ToyName (Data.Text.pack "hello"))
 -- "ToyName {unToyName = \"hello\"}"
+-- 
 -- >>> show (ToyName (fromString "hello"))
 -- "ToyName {unToyName = \"hello\"}"
 newtype ToyName = ToyName
@@ -31,7 +33,7 @@ newtype ToyName = ToyName
 --  No warnings during compilation, runtime error
 
 ----------------
--- /Users/frankeg/workspace/personal/mini-patterns-and-deriving/src/Deriving/Training2.hs:19:34: warning:
+-- mini-patterns-and-deriving/src/Deriving/Training2.hs:19:34: warning:
 --     • Both DeriveAnyClass and GeneralizedNewtypeDeriving are enabled
 --       Defaulting to the DeriveAnyClass strategy for instantiating IsString
 --       Use DerivingStrategies to pick a different strategy
@@ -40,7 +42,7 @@ newtype ToyName = ToyName
 -- 19 |   deriving (Show, Read, Generic, IsString, FromJSON, ToJSON)
 --    |                                  ^^^^^^^^
 
--- /Users/frankeg/workspace/personal/mini-patterns-and-deriving/src/Deriving/Training2.hs:19:34: warning: [-Wmissing-methods]
+-- mini-patterns-and-deriving/src/Deriving/Training2.hs:19:34: warning: [-Wmissing-methods]
 --     • No explicit implementation for
 --         ‘Data.String.fromString’
 --     • In the instance declaration for ‘IsString ToyName’
@@ -48,7 +50,7 @@ newtype ToyName = ToyName
 -- 19 |   deriving (Show, Read, Generic, IsString, FromJSON, ToJSON)
 --    |                                  ^^^^^^^^
 
--- /Users/frankeg/workspace/personal/mini-patterns-and-deriving/src/Deriving/Training2.hs:19:44: warning:
+-- mini-patterns-and-deriving/src/Deriving/Training2.hs:19:44: warning:
 --     • Both DeriveAnyClass and GeneralizedNewtypeDeriving are enabled
 --       Defaulting to the DeriveAnyClass strategy for instantiating FromJSON
 --       Use DerivingStrategies to pick a different strategy
@@ -57,7 +59,7 @@ newtype ToyName = ToyName
 -- 19 |   deriving (Show, Read, Generic, IsString, FromJSON, ToJSON)
 --    |                                            ^^^^^^^^
 
--- /Users/frankeg/workspace/personal/mini-patterns-and-deriving/src/Deriving/Training2.hs:19:54: warning:
+-- mini-patterns-and-deriving/src/Deriving/Training2.hs:19:54: warning:
 --     • Both DeriveAnyClass and GeneralizedNewtypeDeriving are enabled
 --       Defaulting to the DeriveAnyClass strategy for instantiating ToJSON
 --       Use DerivingStrategies to pick a different strategy
