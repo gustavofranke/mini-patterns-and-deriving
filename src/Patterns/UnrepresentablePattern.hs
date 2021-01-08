@@ -3,9 +3,10 @@ module Patterns.UnrepresentablePattern where
 -- Make illegal states unrepresentable: Task 1
 -- Implement the following function by applying the make illegal states unrepresentable pattern.
 
--- group sublists of equal elements
+-- | group sublists of equal elements
 -- >>> group0 "Mississippi"
 -- ["M","i","ss","i","ss","i","pp","i"]
+--
 -- Hint: Use the NonEmpty list.
 group0 :: (Eq a) => [a] -> [[a]]
 group0 = go
