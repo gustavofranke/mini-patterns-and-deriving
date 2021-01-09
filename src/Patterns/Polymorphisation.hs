@@ -19,7 +19,15 @@ containsInt = filter . elem
 
 -- Polymorphisation: Task 3
 -- split list in two parts stopping when predicate returns false
--- >>> span (< 3) [1, 2, 4, 2]
--- ([1, 2], [4, 2])
-span :: (a -> Bool) -> [a] -> ([a], [a])
-span = undefined
+-- >>> span0 (< 3) [1, 2, 4, 2]
+-- ([1,2],[4,2])
+span0 :: (a -> Bool) -> [a] -> ([a], [a])
+span0 fu ls = go fu ls ([],[])
+  where
+    go _ [] res = res
+    go f (x : xs) (ys, ns) =
+      if f x
+        then go f xs (ys ++ [x], ns)
+        else (ys, x:xs)
+
+
