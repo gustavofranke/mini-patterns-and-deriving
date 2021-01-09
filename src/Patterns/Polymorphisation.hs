@@ -9,12 +9,13 @@ module Patterns.Polymorphisation where
 maybeConcat :: [Maybe [Int]] -> [Int]
 maybeConcat = undefined
 
--- Polymorphisation: Task 2
+-- | Polymorphisation: Task 2
 -- return lists containing a given integer
 -- >>> containsInt 3 [[1..5], [2,0], [3,4]]
--- [[1,2,3,4,5], [3,4]]
-containsInt :: Int -> [[Int]] -> [[Int]]
-containsInt = undefined
+-- [[1,2,3,4,5],[3,4]]
+containsInt :: (Foldable t, Eq a) => a -> [t a] -> [t a]
+-- containsInt e = filter (e `elem`)
+containsInt = filter . elem
 
 -- Polymorphisation: Task 3
 -- split list in two parts stopping when predicate returns false
