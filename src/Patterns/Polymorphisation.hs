@@ -1,13 +1,24 @@
 module Patterns.Polymorphisation where
 
--- Polymorphisation: Task 1
+import Data.Maybe ( catMaybes )
+import Data.Foldable ( Foldable(fold) )
+
+-- | Polymorphisation: Task 1
 -- Improve the following functions by applying the Polymorphisation pattern.
 
 -- append all elements inside all Just values
 -- >>> maybeConcat [Just [1,2,3], Nothing, Just [4,5]]
 -- [1,2,3,4,5]
-maybeConcat :: [Maybe [Int]] -> [Int]
-maybeConcat = undefined
+maybeConcat :: [Maybe [a]] -> [a]
+-- maybeConcat ls = concat $ map fromJust $ snd $ partition isNothing ls
+-- maybeConcat ls = concatMap fromJust (snd $ partition isNothing ls)
+maybeConcat = concat . catMaybes
+
+maybeConcatM :: Monoid m => [Maybe [m]] -> [m]
+maybeConcatM = mconcat . catMaybes
+
+maybeConcatFM :: (Foldable f, Monoid m) => f (Maybe m) -> m
+maybeConcatFM = fold . fold
 
 -- | Polymorphisation: Task 2
 -- return lists containing a given integer
@@ -22,12 +33,10 @@ containsInt = filter . elem
 -- >>> span0 (< 3) [1, 2, 4, 2]
 -- ([1,2],[4,2])
 span0 :: (a -> Bool) -> [a] -> ([a], [a])
-span0 fu ls = go fu ls ([],[])
+span0 fu ls = go fu ls ([], [])
   where
     go _ [] res = res
     go f (x : xs) (ys, ns) =
       if f x
         then go f xs (ys ++ [x], ns)
-        else (ys, x:xs)
-
-
+        else (ys, x : xs)
