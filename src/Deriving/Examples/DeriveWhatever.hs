@@ -1,4 +1,6 @@
-{-# LANGUAGE DeriveFoldable #-}
+{-# LANGUAGE DerivingStrategies #-}
+{-# LANGUAGE DeriveTraversable #-}
+
 {-# OPTIONS_GHC
     -ddump-deriv
     -dsuppress-idinfo
@@ -8,17 +10,14 @@
     -dsuppress-module-prefixes
 #-}
 
-{-# LANGUAGE DeriveFunctor #-}
-{-# LANGUAGE DerivingStrategies #-}
-
 module Deriving.Examples.DeriveWhatever where
 
 data Gift a
    = None
    | Some a
-   deriving stock (Functor, Foldable)
+   deriving stock (Functor, Foldable, Traversable)
 
--- $ stack ghc src/Deriving/Examples/DeriveWhatever.hs 
+-- $ stack ghc src/Deriving/Examples/DeriveWhatever.hs
 -- [1 of 1] Compiling Deriving.Examples.DeriveWhatever ( src/Deriving/Examples/DeriveWhatever.hs, src/Deriving/Examples/DeriveWhatever.o )
 -- 
 -- ==================== Derived instances ====================
@@ -36,6 +35,10 @@ data Gift a
 --     foldMap f (Some a1) = f a1
 --     null None = True
 --     null (Some _) = False
+--   
+--   instance Traversable Gift where
+--     traverse f None = pure None
+--     traverse f (Some a1) = fmap (\ b1 -> Some b1) (f a1)
 --   
 -- 
 -- Derived type family instances:
@@ -123,3 +126,21 @@ data Gift a
 -- ==================== Filling in method body ====================
 -- Foldable [Gift]
 --   product = $dmproduct @(Gift)
+-- 
+-- 
+-- 
+-- ==================== Filling in method body ====================
+-- Traversable [Gift]
+--   sequenceA = $dmsequenceA @(Gift)
+-- 
+-- 
+-- 
+-- ==================== Filling in method body ====================
+-- Traversable [Gift]
+--   mapM = $dmmapM @(Gift)
+-- 
+-- 
+-- 
+-- ==================== Filling in method body ====================
+-- Traversable [Gift]
+--   sequence = $dmsequence @(Gift)
