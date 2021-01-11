@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5ec31181573f2aeb6339e57b417dba627c1dc38544204e41935d16c5619541fe
+-- hash: 05a8017da94bfd1a72d74c2ace02e7466469908b834c5267f50daa121179ab1b
 
 name:           mini-patterns-and-deriving
 version:        0.1.0.0
@@ -31,6 +31,7 @@ library
       Deriving.Examples.Candies
       Deriving.Examples.DeriveWhatever
       Deriving.Examples.Motivation
+      Deriving.Examples.Via
       Deriving.Puzzle1
       Deriving.Puzzle2
       Deriving.Training1
